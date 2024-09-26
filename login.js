@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click',function(event){
     // console.log(phoneNumber, pinNumber);
     if(phoneNumber==="5" && pinNumber==="1233"){
         console.log("you are logged");
-        window.location.href="/home.html"
+        window.location.href="./home.html"
         
 
     }else{
