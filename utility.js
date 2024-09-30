@@ -24,5 +24,10 @@ function getTextfieldvalueById(id){
 }
 
 function showSectionbyId(){
-    
+    document.getElementById('addmoney-form').classList.add('hidden')
+    document.getElementById('cashout-form').classList.add('hidden')
+    document.getElementById('transection-section').classList.add('hidden')
+
+    document.getElementById(id).classList.remove('hidden')
+
 }
