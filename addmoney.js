@@ -37,6 +37,15 @@ document.getElementById("Addmoney-btn").addEventListener('click',function(event)
 
         document.getElementById('account-bal').innerText=newBalance
         console.log(balance, addMoney);
+
+        //history part here
+
+        const p=document.createElement('p')
+        p.innerText=`Added: ${addMoney} Tk , New-balance: ${newBalance}`
+
+        // should be a common function 
+
+        document.getElementById('history-container').appendChild(p)
         
         
     }else{

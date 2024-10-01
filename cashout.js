@@ -26,6 +26,16 @@ document.getElementById('cashout-btn').addEventListener('click',function(event){
    const balanceAmount=getTextfieldvalueById('account-bal')
    const remainAmount=balanceAmount-cashOut
    document.getElementById('account-bal').innerText=remainAmount
+
+   // transection history part added
+
+   const div=document.createElement('div')
+   div.classList.add(bg-blue-600)
+   div.innerHTML=`<h3>Cash out</h3>
+   <p>withdraw ${cashOut} Tk , ${remainAmount}</p>
+   
+`
+document.getElementById('history-container').appendChild(div);
     
     
    }else{
