@@ -17,6 +17,11 @@ document.getElementById("Addmoney-btn").addEventListener('click',function(event)
     const pinNum=document.getElementById('pin-input').value
     console.log(pinNum);
 
+    if(isNaN(addMoney)){
+        alert('failed to add money')
+        return
+    }
+
     if(pinNum==="1234"){
         console.log('successfully added money');
 
