@@ -8,6 +8,12 @@ document.getElementById('cashout-btn').addEventListener('click',function(event){
    const cashOut=getInputbyId('cash-out')
    const cashoutPin=getInputbyId('cashout-pin')
    console.log(cashOut, cashoutPin);
+
+   if(isNaN(cashOut)){
+      alert('failed to cash out')
+      return
+
+   }
    
 
    if(cashoutPin===1234 ){
@@ -24,13 +30,19 @@ document.getElementById('cashout-btn').addEventListener('click',function(event){
     
 
    const balanceAmount=getTextfieldvalueById('account-bal')
+
+   if(cashOut>balanceAmount){
+      alert('Insufficient balance')
+      return
+
+   }
    const remainAmount=balanceAmount-cashOut
    document.getElementById('account-bal').innerText=remainAmount
 
    // transection history part added
 
    const div=document.createElement('div')
-   div.classList.add('bg-blue-600');
+   div.classList.add('bg-blue-400');
    div.innerHTML=`<h3>Cash out</h3>
    <p>withdraw ${cashOut} Tk  ${remainAmount}</p>`
 
